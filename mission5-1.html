@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>mission5-1</title>
+  <style>
+    body{
+      text-align: center; 
+    }
+    button{
+    width:48px;
+    height:50px; 
+    box-shadow: 2px 2px 0 black;
+    }
+    button:active{
+      background-color: black;
+      transform: translate(2px , 2px);
+      box-shadow: none;
+    }
+  </style>
+</head>
+ 
+<body>
+  
+    
+    
+      <div>
+        <input readonly id="result" type="text" value="0" >
+        <button onclick="c_click()" style="background-color:orange;width:28px;height:28px;">C</button>
+      </div>
+      <!-- 上から1段目（789÷） -->
+      <div>
+        <button onclick="num_click( 7 )"  >7</button>
+        <button onclick="num_click( 8 )" >8</button>
+        <button onclick="num_click( 9 )">9</button>
+        <button onclick="ope_click( innerText )" style="background-color:lightpink;">/</button>
+      </div>
+        
+      <!-- 上から2段目（456×） -->
+      <div>
+        <button onclick="num_click( 4 )" >4</button>
+        <button onclick="num_click( 5 )" >5</button>
+        <button onclick="num_click( 6 )">6</button>
+        <button onclick="ope_click( this.innerText )" style="background-color:lightpink;">*</button>
+      </div>
+ 
+      <!-- 上から3段目（123-） -->
+      <div>
+        <button onclick="num_click( 1 )" >1</button>
+        <button onclick="num_click( 2 )" >2</button>
+        <button onclick="num_click( 3 )" >3</button>
+        <button onclick="ope_click( this.innerText )" style="background-color:lightpink;">-</button>
+      </div>
+ 
+      <!-- 上から4段目（0.=+) -->
+      <div> 
+        <button onclick="num_click( 0 )" >0</button>
+        <button onclick="num_click( this.innerText )" >.</button>
+        <button onclick="equal_click( this.innerText )">=</button>
+        <button onclick="ope_click( this.innerText )" style="background-color:lightpink;">+</button>
+      </div>
+    
+    <script src="mission5-1.js"></script>
+</body>
+</html>
